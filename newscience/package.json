@@ -27,24 +27,27 @@
   },
   "private": true,
   "dependencies": {
-    "@nrwl/node": "^10.1.0"
+    "@nrwl/node": "^10.1.0",
+    "@tensorflow/tfjs-node": "^2.3.0",
+    "natural": "^2.1.5"
   },
   "devDependencies": {
+    "@nrwl/eslint-plugin-nx": "10.1.0",
+    "@nrwl/jest": "10.1.0",
     "@nrwl/workspace": "10.1.0",
+    "@types/jest": "26.0.8",
+    "@types/natural": "^0.6.3",
     "@types/node": "~8.9.4",
+    "@typescript-eslint/eslint-plugin": "2.19.2",
+    "@typescript-eslint/parser": "2.19.2",
     "dotenv": "6.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.0.0",
+    "jest": "26.2.2",
+    "prettier": "2.0.4",
+    "ts-jest": "26.1.4",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
-    "eslint": "6.8.0",
-    "typescript": "~3.9.3",
-    "prettier": "2.0.4",
-    "@nrwl/eslint-plugin-nx": "10.1.0",
-    "@typescript-eslint/parser": "2.19.2",
-    "@typescript-eslint/eslint-plugin": "2.19.2",
-    "eslint-config-prettier": "6.0.0",
-    "@nrwl/jest": "10.1.0",
-    "jest": "26.2.2",
-    "@types/jest": "26.0.8",
-    "ts-jest": "26.1.4"
+    "typescript": "~3.9.3"
   }
 }

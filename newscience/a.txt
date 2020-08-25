@@ -1,0 +1,63 @@
+node-pre-gyp info This Node instance does not support builds for N-API version 6
+node-pre-gyp info This Node instance does not support builds for N-API version 6
+2020-08-25 18:25:59.130063: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-08-25 18:25:59.148523: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400045000 Hz
+2020-08-25 18:25:59.148996: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x51d5250 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-25 18:25:59.149023: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2mlibs/question-classifier/src/lib/[22m[1mquestion-classifier.spec.ts[22m ([0m[1m[41m7.515 s[49m[22m[0m)
+  RNN classifier
+    [31m✕[39m [2mshould (1 ms)[22m
+
+[1m[31m  [1m● [22m[1mRNN classifier › should[39m[22m
+
+    Input Tensors should have the same number of samples as target Tensors. Found 256 input sample(s) and 1 target sample(s).
+[2m[22m
+[2m    [0m [90m 61 | [39m  [36mfor[39m (let i [33m=[39m [35m0[39m[33m;[39m i [33m<[39m goodQsTensors[33m.[39mlength[33m;[39m i[33m++[39m) {[0m[22m
+[2m    [0m [90m 62 | [39m    [36mfor[39m (let x [33m=[39m [35m0[39m[33m;[39m x [33m<[39m goodQsTensors[i][33m.[39mlength[33m;[39m x[33m++[39m) {[0m[22m
+[2m    [0m[31m[1m>[22m[2m[39m[90m 63 | [39m      await [33mRNNModel[39m[33m.[39mfit(goodQsTensors[i][x][33m,[39m tf[33m.[39mtensor1d([[33mQuestionType[39m[33m.[39m[33mGOOD[39m]))[0m[22m
+[2m    [0m [90m    | [39m                     [31m[1m^[22m[2m[39m[0m[22m
+[2m    [0m [90m 64 | [39m    }[0m[22m
+[2m    [0m [90m 65 | [39m  }[0m[22m
+[2m    [0m [90m 66 | [39m  [90m// await RNNModel.fit(, tf.tensor1d([QuestionType.GOOD]))[39m[0m[22m
+[2m[22m
+[2m      [2mat new ValueError ([22m[2m../../node_modules/@tensorflow/tfjs-layers/src/errors.ts[2m:48:5)[22m[2m[22m
+[2m      [2mat checkArrayLengths ([22m[2m../../node_modules/@tensorflow/tfjs-layers/src/engine/training.ts[2m:207:11)[22m[2m[22m
+[2m      [2mat LayersModel.standardizeUserDataXY ([22m[2m../../node_modules/@tensorflow/tfjs-layers/src/engine/training.ts[2m:1166:5)[22m[2m[22m
+[2m      [2mat LayersModel.<anonymous> ([22m[2m../../node_modules/@tensorflow/tfjs-layers/src/engine/training.ts[2m:1188:14)[22m[2m[22m
+[2m      [2mat step ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:94:23)[22m[2m[22m
+[2m      [2mat Object.next ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:75:53)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:68:71[22m[2m[22m
+[2m      [2mat __awaiter ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:64:12)[22m[2m[22m
+[2m      [2mat LayersModel.standardizeUserData ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:9448:16)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/@tensorflow/tfjs-layers/src/engine/training_tensors.ts[2m:438:21[22m[2m[22m
+[2m      [2mat step ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:94:23)[22m[2m[22m
+[2m      [2mat Object.next ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:75:53)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:68:71[22m[2m[22m
+[2m      [2mat __awaiter ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:64:12)[22m[2m[22m
+[2m      [2mat fitTensors ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:8284:12)[22m[2m[22m
+[2m      [2mat LayersModel.<anonymous> ([22m[2m../../node_modules/@tensorflow/tfjs-layers/src/engine/training.ts[2m:1463:12)[22m[2m[22m
+[2m      [2mat step ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:94:23)[22m[2m[22m
+[2m      [2mat Object.next ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:75:53)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:68:71[22m[2m[22m
+[2m      [2mat __awaiter ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:64:12)[22m[2m[22m
+[2m      [2mat LayersModel.fit ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:9711:16)[22m[2m[22m
+[2m      [2mat Sequential.<anonymous> ([22m[2m../../node_modules/@tensorflow/tfjs-layers/src/models.ts[2m:863:23)[22m[2m[22m
+[2m      [2mat step ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:94:23)[22m[2m[22m
+[2m      [2mat Object.next ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:75:53)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:68:71[22m[2m[22m
+[2m      [2mat __awaiter ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:64:12)[22m[2m[22m
+[2m      [2mat Sequential.fit ([22m[2m../../node_modules/@tensorflow/tfjs-layers/dist/tf-layers.node.js[2m:10900:16)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2msrc/lib/question-classifier.ts[2m:63:22)[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/tslib/tslib.js[2m:115:75[22m[2m[22m
+[2m      [2mat Object.__awaiter ([22m[2m../../node_modules/tslib/tslib.js[2m:111:16)[22m[2m[22m
+[2m      [2mat Object.trainRNN ([22m[2msrc/lib/question-classifier.ts[2m:46:20)[22m[2m[22m
+[2m      [2mat [22m[2m[0m[36msrc/lib/question-classifier.spec.ts[39m[0m[2m:6:11[22m[2m[22m
+[2m      [2mat [22m[2m../../node_modules/tslib/tslib.js[2m:115:75[22m[2m[22m
+[2m      [2mat Object.__awaiter ([22m[2m../../node_modules/tslib/tslib.js[2m:111:16)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36msrc/lib/question-classifier.spec.ts[39m[0m[2m:5:24)[22m[2m[22m
+
+[1mTest Suites: [22m[1m[31m1 failed[39m[22m, 1 total
+[1mTests:       [22m[1m[31m1 failed[39m[22m, 1 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        [1m[33m8.221 s[39m[22m
+[2mRan all test suites[22m[2m.[22m

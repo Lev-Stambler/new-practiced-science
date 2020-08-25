@@ -17,7 +17,10 @@
     "baseUrl": ".",
     "paths": {
       "@newscience/supplement-info": ["libs/supplement-info/src/index.ts"],
-      "@newscience/interfaces": ["libs/interfaces/src/index.ts"]
+      "@newscience/interfaces": ["libs/interfaces/src/index.ts"],
+      "@newscience/question-classifier": [
+        "libs/question-classifier/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
